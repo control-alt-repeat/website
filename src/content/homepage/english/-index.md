@@ -11,20 +11,6 @@ banner:
 
 # Features
 features:
-  - title: Digital Conversion
-    image: /images/service-1.png
-    content: "Preserve your precious memories with our growing range of media conversion solutions. We specialize in recovering video, audio, and data from outdated formats, including:"
-    bulletpoints:
-      - VHS
-      - Hi8
-      - Minidisc
-      - Computer drives (IDE/SATA/mSATA and more)
-      - Your media will be securely transferred and delivered via digital download, USB, or both; your choice.
-    button:
-      enable: true
-      label: Contact Us
-      link: /contact
-
   - title: Reclaim Value from Your Electronics
     image: /images/service-2.png
     content: "Turn your unused tech into cash with ease! We handle everything, from listing to sale, with just a 30% commission from the final sale price. We specialize in selling:"
@@ -38,6 +24,20 @@ features:
     button:
       enable: true
       label: Get Started Selling
+      link: /contact
+
+  - title: Digital Conversion
+    image: /images/service-1.png
+    content: "Preserve your precious memories with our growing range of media conversion solutions. We specialize in recovering video, audio, and data from outdated formats, including:"
+    bulletpoints:
+      - VHS
+      - Hi8
+      - Minidisc
+      - Computer drives (IDE/SATA/mSATA and more)
+      - Your media will be securely transferred and delivered via digital download, USB, or both; your choice.
+    button:
+      enable: true
+      label: Contact Us
       link: /contact
 
   - title: Upgrade Your Laptop or PC for Better Performance
