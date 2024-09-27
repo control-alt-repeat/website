@@ -41,16 +41,19 @@ const {
     <div class="container">
       <div class="row">
         <div class="mx-auto md:col-10 lg:col-6">
+          <!-- Google Maps Store Locator Section -->
+          <div class="locator-wrapper" style="width:100%; height:500px;">
+            <gmpx-api-loader
+              key="AIzaSyDqAzGkyiRkNF3apjyZfzZER0XMP_9M-lI"
+              solution-channel="GMP_QB_locatorplus_v10_cF">
+            </gmpx-api-loader>
+            <gmpx-store-locator></gmpx-store-locator>
+          </div>
           <div class="content">
             <Content />
           </div>
         </div>
       </div>
-    </div>
-    <!-- Google Maps Store Locator Section -->
-    <div class="locator-wrapper" style="width:100%; height:500px;">
-      <gmpx-api-loader key="AIzaSyDqAzGkyiRkNF3apjyZfzZER0XMP_9M-lI" solution-channel="GMP_QB_locatorplus_v10_cF"></gmpx-api-loader>
-      <gmpx-store-locator map-id="166a6a5da45d6fc5"></gmpx-store-locator>
     </div>
   </section>
 </Base>
@@ -58,19 +61,51 @@ const {
 <!-- Include Google Maps scripts -->
 <script is:inline>
   const CONFIGURATION = {
-    "locations": [
-      {"title":"Control Alt Repeat","address1":"White Cross Business Park","address2":"Lancaster, United Kingdom","coords":{"lat":54.045101,"lng":-2.7973176},"placeId":"ChIJZ76Odhpje0gRYgpLOvuWr-c","actions":[{"label":"Book appointment","defaultUrl":"https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0MvRUYkvIKZpRLvXAjKJss6pWstIDUqh-PPb1-H6slwO2-YARjdjgDcOgoqP79zH9f1Omem-vD"}]}
+    locations: [
+      {
+        title: "Control Alt Repeat",
+        address1: "White Cross Business Park",
+        address2: "Lancaster, United Kingdom",
+        coords: { lat: 54.045101, lng: -2.7973176 },
+        placeId: "ChIJZ76Odhpje0gRYgpLOvuWr-c",
+        actions: [
+          {
+            label: "Book appointment",
+            defaultUrl:
+              "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0MvRUYkvIKZpRLvXAjKJss6pWstIDUqh-PPb1-H6slwO2-YARjdjgDcOgoqP79zH9f1Omem-vD",
+          },
+        ],
+      },
     ],
-    "mapOptions": {"center":{"lat":38.0,"lng":-100.0},"fullscreenControl":true,"mapTypeControl":false,"streetViewControl":false,"zoom":4,"zoomControl":true,"maxZoom":17,"mapId":""},
-    "mapsApiKey": "AIzaSyDqAzGkyiRkNF3apjyZfzZER0XMP_9M-lI",
-    "capabilities": {"input":false,"autocomplete":false,"directions":false,"distanceMatrix":false,"details":false,"actions":true}
+    mapOptions: {
+      center: { lat: 38.0, lng: -100.0 },
+      fullscreenControl: false,
+      mapTypeControl: false,
+      streetViewControl: true,
+      zoom: 2,
+      zoomControl: true,
+      maxZoom: 17,
+      mapId: "166a6a5da45d6fc5",
+    },
+    mapsApiKey: "AIzaSyDqAzGkyiRkNF3apjyZfzZER0XMP_9M-lI",
+    capabilities: {
+      input: true,
+      autocomplete: true,
+      directions: true,
+      distanceMatrix: true,
+      details: true,
+      actions: true,
+    },
   };
 
-  document.addEventListener('DOMContentLoaded', async () => {
-    await customElements.whenDefined('gmpx-store-locator');
-    const locator = document.querySelector('gmpx-store-locator');
+  document.addEventListener("DOMContentLoaded", async () => {
+    await customElements.whenDefined("gmpx-store-locator");
+    const locator = document.querySelector("gmpx-store-locator");
     locator.configureFromQuickBuilder(CONFIGURATION);
   });
 </script>
 
-<script is:inline type="module" src="https://unpkg.com/@googlemaps/extended-component-library@0.6"></script>
+<script
+  is:inline
+  type="module"
+  src="https://unpkg.com/@googlemaps/extended-component-library@0.6"></script>
