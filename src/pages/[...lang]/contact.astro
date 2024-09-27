@@ -38,28 +38,6 @@ const {
   description={description}
   image={image}
 >
-  <PageHeader title={title} />
-  <section class="section-sm">
-    <div class="container">
-      <div class="row">
-        <div class="mx-auto md:col-10 lg:col-6">
-          <!-- Google Maps Store Locator Section -->
-          <div class="locator-wrapper" style="width:100%; height:500px;">
-            <gmpx-api-loader
-              key={mapsApiKey}
-              solution-channel="GMP_QB_locatorplus_v10_cF">
-            </gmpx-api-loader>
-            <gmpx-store-locator></gmpx-store-locator>
-          </div>
-          <div class="content">
-            <Content />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</Base>
-
 <script
   is:inline
   type="module"
@@ -120,3 +98,24 @@ const {
     locator.configureFromQuickBuilder(CONFIGURATION);
   });
 </script>
+  <PageHeader title={title} />
+  <section class="section-sm">
+    <div class="container">
+      <div class="row">
+        <div class="mx-auto md:col-10 lg:col-6">
+          <!-- Google Maps Store Locator Section -->
+          <div class="locator-wrapper" style="width:100%; height:500px;">
+            <gmpx-api-loader
+              key={mapsApiKey}
+              solution-channel="GMP_QB_locatorplus_v10_cF">
+            </gmpx-api-loader>
+            <gmpx-store-locator></gmpx-store-locator>
+          </div>
+          <div class="content">
+            <Content />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
