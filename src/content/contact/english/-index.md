@@ -19,7 +19,7 @@ LA1 4XQ
 * [Open Street Map](https://www.openstreetmap.org/way/639187931#map=19/54.044994/-2.797446&layers=N)
 * [what3words](https://what3words.com/carbon.clips.cube)
 * [OS Maps](https://explore.osmaps.com/pin?lat=54.044994&lon=-2.797446&zoom=18.0000)
-* [Google Maps](https://maps.app.goo.gl/F4phV4RcQen2sjTM6)
+* [Google Maps](https://maps.app.goo.gl/hrpANhCZ5B3skfRk7)
 
 
 ### Note
