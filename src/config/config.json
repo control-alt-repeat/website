@@ -37,7 +37,7 @@
   "navigation_button": {
     "enable": true,
     "label": "Contact Us",
-    "link": "https://controlaltrepeat.net/contact/"
+    "link": "/contact"
   },
 
   "disqus": {
