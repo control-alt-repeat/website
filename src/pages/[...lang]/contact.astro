@@ -60,6 +60,11 @@ const {
   </section>
 </Base>
 
+<script
+  is:inline
+  type="module"
+  src="https://unpkg.com/@googlemaps/extended-component-library@0.6" />
+
 <!-- Include Google Maps scripts -->
 <script is:inline>
   const CONFIGURATION = {
@@ -115,8 +120,3 @@ const {
     locator.configureFromQuickBuilder(CONFIGURATION);
   });
 </script>
-
-<script
-  is:inline
-  type="module"
-  src="https://unpkg.com/@googlemaps/extended-component-library@0.6"></script>
