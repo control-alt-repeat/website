@@ -1,12 +1,9 @@
 ---
-import config from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
 import { getListPage } from "@/lib/contentParser.astro";
 import { getTranslations, supportedLang } from "@/lib/utils/languageParser";
 import PageHeader from "@/partials/PageHeader.astro";
 import { type ContentEntryMap } from "astro:content";
-
-const mapsApiKey = import.meta.env.MAPS_API_KEY;
 
 export function getStaticPaths() {
   const paths = supportedLang.map((lang) => ({
@@ -20,37 +17,22 @@ const contact = await getListPage("contact", lang as keyof ContentEntryMap);
 
 const { Content } = await contact[0].render();
 
-const { contact_form_action }: { contact_form_action: string } = config.params;
 const { title, description, meta_title, image } = contact[0].data;
 
-const {
-  working_mail,
-  full_name,
-  anything_else,
-  contact_message_placeholder,
-  submit,
-} = await getTranslations(lang as keyof ContentEntryMap);
+const {} = await getTranslations(lang as keyof ContentEntryMap);
 ---
 
 <Base
-  title={title}
-  meta_title={meta_title}
-  description={description}
-  image={image}
+title={title}
+meta_title={meta_title}
+description={description}
+image={image}
 >
-  <PageHeader title={title} />
+<PageHeader title={title} />
   <section class="section-sm">
     <div class="container">
       <div class="row">
         <div class="mx-auto md:col-10 lg:col-6">
-          <!-- Google Maps Store Locator Section -->
-          <div class="locator-wrapper" style="width:100%; height:500px;">
-            <gmpx-api-loader
-              key={mapsApiKey}
-              solution-channel="GMP_QB_locatorplus_v10_cF">
-            </gmpx-api-loader>
-            <gmpx-store-locator></gmpx-store-locator>
-          </div>
           <div class="content">
             <Content />
           </div>
@@ -59,64 +41,3 @@ const {
     </div>
   </section>
 </Base>
-
-<!-- Include Google Maps scripts -->
-<script is:inline>
-  const CONFIGURATION = {
-    locations: [
-      {
-        title: "Control Alt Repeat",
-        address1: "White Cross Business Park",
-        address2: "Lancaster, United Kingdom",
-        coords: { lat: 54.045101, lng: -2.7973176 },
-        placeId: "ChIJZ76Odhpje0gRYgpLOvuWr-c",
-        actions: [
-          {
-            label: "Book appointment",
-            defaultUrl:
-              "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0MvRUYkvIKZpRLvXAjKJss6pWstIDUqh-PPb1-H6slwO2-YARjdjgDcOgoqP79zH9f1Omem-vD",
-          },
-          {
-            label: "WhatsApp",
-            defaultUrl:
-              "https://wa.link/hpgb4s",
-          },
-          {
-            label: "Email",
-            defaultUrl:
-              "mailto:hello@controlaltrepeat.net",
-          },
-        ],
-      },
-    ],
-    mapOptions: {
-      center: { lat: 38.0, lng: -100.0 },
-      fullscreenControl: false,
-      mapTypeControl: false,
-      streetViewControl: true,
-      zoom: 2,
-      zoomControl: true,
-      maxZoom: 17,
-      mapId: "166a6a5da45d6fc5",
-    },
-    capabilities: {
-      input: false,
-      autocomplete: false,
-      directions: false,
-      distanceMatrix: false,
-      details: false,
-      actions: true,
-    },
-  };
-
-  document.addEventListener("DOMContentLoaded", async () => {
-    await customElements.whenDefined("gmpx-store-locator");
-    const locator = document.querySelector("gmpx-store-locator");
-    locator.configureFromQuickBuilder(CONFIGURATION);
-  });
-</script>
-
-<script
-  is:inline
-  type="module"
-  src="https://unpkg.com/@googlemaps/extended-component-library@0.6"></script>
