@@ -23,8 +23,8 @@ features:
       - Mass storage devices
     button:
       enable: true
-      label: Get Started Selling
-      link: /contact
+      label: Read more about selling your electronics
+      link: /selling-your-electronics
 
   - title: Digital Conversion
     image: /images/service-1.png
@@ -37,8 +37,8 @@ features:
       - Your media will be securely transferred and delivered via digital download, USB, or both; your choice.
     button:
       enable: true
-      label: Contact Us
-      link: /contact
+      label: Read more about Digital Conversion
+      link: /digital-conversion
 
   - title: Upgrade Your Laptop or PC for Better Performance
     image: /images/service-3.png
