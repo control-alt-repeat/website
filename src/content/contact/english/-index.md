@@ -5,6 +5,10 @@ description: "Control Alt Repeats contact information"
 draft: false
 ---
 
+### Phone
+
+07984 599771
+
 ### Email
 
 hello@controlaltrepeat.net
