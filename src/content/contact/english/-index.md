@@ -5,6 +5,10 @@ description: "Control Alt Repeats contact information"
 draft: false
 ---
 
+### Email
+
+hello@controlaltrepeat.net
+
 ### Postal
 
 Control Alt Repeat<br />
