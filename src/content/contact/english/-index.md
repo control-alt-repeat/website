@@ -9,6 +9,8 @@ draft: false
 
 07984 599771
 
+_Majority of phonecalls these days are spam. If you call and we do not answer please leave a voicemail, or send a message via WhatsApp, email, or SMS letting us know you called._
+
 ### Email
 
 hello@controlaltrepeat.net
