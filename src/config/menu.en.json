@@ -9,7 +9,8 @@
         { "name": "Digital Conversion", "url": "/digital-conversion" },
         { "name": "Selling Your Electronics", "url": "/selling-your-electronics" }
       ]
-    }
+    },
+    { "name": "Certifications", "url": "/certifications" }
   ],
   "footer": [
     { "name": "Feedback", "url": "/feedback" },
