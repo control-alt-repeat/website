@@ -5,11 +5,10 @@ import theme from "@/config/theme.json";
 import { plainify } from "@/lib/utils/textConverter";
 import Footer from "@/partials/Footer.astro";
 import Header from "@/partials/Header.astro";
-import "@/styles/main.scss";
+import "@/styles/main.css";
 import { AstroFont } from "astro-font";
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 import SearchModal from "./helpers/SearchModal";
-import { getLangFromUrl } from "@/lib/utils/languageParser";
 
 // font families
 const pf = theme.fonts.font_family.primary;
@@ -19,12 +18,12 @@ let fontPrimary, fontSecondary;
 if (theme.fonts.font_family.primary) {
   fontPrimary = theme.fonts.font_family.primary
     .replace(/\+/g, " ")
-    .replace(/:[ital,]*[ital@]*[wght@]*[0-9,;]+/gi, "");
+    .replace(/:[ital,]*[ital@]*[wght@]*[0-9,;.]+/gi, "");
 }
 if (theme.fonts.font_family.secondary) {
   fontSecondary = theme.fonts.font_family.secondary
     .replace(/\+/g, " ")
-    .replace(/:[ital,]*[ital@]*[wght@]*[0-9,;]+/gi, "");
+    .replace(/:[ital,]*[ital@]*[wght@]*[0-9,;.]+/gi, "");
 }
 
 // types for frontmatters
@@ -35,20 +34,19 @@ export interface Props {
   image?: string;
   noindex?: boolean;
   canonical?: string;
-  lang?: string;
 }
 
-// distructure frontmatters
-const { title, meta_title, description, image, noindex, canonical, lang } =
+// destructure frontmatter
+const { title, meta_title, description, image, noindex, canonical } =
   Astro.props;
 
-const language = lang || getLangFromUrl(Astro.url);
+// const language = lang || getLangFromUrl(Astro.url);
 
 const mapsApiKey = import.meta.env.MAPS_API_KEY;
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html lang="en">
   <head>
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href={config.site.apple_touch_icon} />
@@ -123,7 +121,7 @@ const mapsApiKey = import.meta.env.MAPS_API_KEY;
       )}
     />
 
-    <ViewTransitions />
+    <ClientRouter />
 
     <!-- author from config.json -->
     <meta name="author" content={config.metadata.meta_author} />
@@ -187,7 +185,7 @@ const mapsApiKey = import.meta.env.MAPS_API_KEY;
     <gmpx-api-loader key={mapsApiKey}></gmpx-api-loader>
     <TwSizeIndicator />
     <Header />
-    <SearchModal lang={language} client:load />
+    <SearchModal client:load />
     <main id="main-content">
       <slot />
     </main>

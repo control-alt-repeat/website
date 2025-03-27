@@ -1,0 +1,36 @@
+---
+import config from "@/config/config.json";
+import Base from "@/layouts/Base.astro";
+import PageHeader from "@/partials/PageHeader.astro";
+import { getEntry, CollectionEntry, render } from "astro:content";
+
+const contact = (await getEntry(
+  "contact",
+  "-index"
+)) as CollectionEntry<"contact">;
+
+const { title, description, meta_title, image } = contact.data;
+
+const { Content } = await render(contact);
+---
+
+<Base
+title={title}
+meta_title={meta_title}
+description={description}
+image={image}
+>
+<PageHeader title={title} />
+  <section class="section-sm">
+    <div class="container">
+      <div class="row">
+        <div class="mx-auto md:col-10 lg:col-6">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1171.3134608301848!2d-2.7981622!3d54.0448863!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487b631a768ebe67%3A0xe7af96fb3a4b0a62!2sControl%20Alt%20Repeat!5e0!3m2!1sen!2suk!4v1727632394779!5m2!1sen!2suk" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="content">
+            <Content />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

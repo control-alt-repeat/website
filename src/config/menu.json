@@ -1,0 +1,19 @@
+{
+  "main": [
+    { "name": "Home", "url": "/" },
+    {
+      "name": "Services",
+      "url": "",
+      "hasChildren": true,
+      "children": [
+        { "name": "Digital Conversion", "url": "/digital-conversion" },
+        { "name": "Selling Your Electronics", "url": "/selling-your-electronics" }
+      ]
+    },
+    { "name": "Certifications", "url": "/certifications" }
+  ],
+  "footer": [
+    { "name": "Feedback", "url": "/feedback" },
+    { "name": "Privacy Policy", "url": "/privacy-policy" }
+  ]
+}

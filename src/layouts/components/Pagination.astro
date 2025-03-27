@@ -1,8 +1,4 @@
 ---
-import { getLangFromUrl, slugSelector } from "@/lib/utils/languageParser";
-
-const lang = getLangFromUrl(Astro.url);
-
 type Pagination = {
   section?: string;
   currentPage?: number;
@@ -31,13 +27,10 @@ for (let i = 1; i <= totalPages; i++) {
         <a
           href={
             indexPageLink
-              ? slugSelector(`/${section ? section : ""}`, lang)
-              : slugSelector(
-                  `/${section ? section : ""}/page/${currentPage - 1}`,
-                  lang
-                )
+              ? `${section ? "/" + section : "/"}`
+              : `${section ? "/" + section : ""}/page/${currentPage - 1}`
           }
-          class="rounded px-2 py-1.5 text-dark hover:bg-theme-light dark:text-darkmode-dark dark:hover:bg-darkmode-theme-light"
+          class="rounded px-2 py-1.5 text-text-dark hover:bg-light dark:text-darkmode-text-dark dark:hover:bg-darkmode-light"
         >
           <span class="sr-only">Previous</span>
           <svg
@@ -55,7 +48,7 @@ for (let i = 1; i <= totalPages; i++) {
           </svg>
         </a>
       ) : (
-        <span class="rounded px-2 py-1.5 text-light">
+        <span class="rounded px-2 py-1.5 text-text-light">
           <span class="sr-only">Previous</span>
           <svg
             viewBox="0 0 20 20"
@@ -78,20 +71,19 @@ for (let i = 1; i <= totalPages; i++) {
         pagination === currentPage ? (
           <span
             aria-current="page"
-            class="rounded bg-primary px-4 py-2 text-white dark:bg-darkmode-primary dark:text-dark"
+            class="rounded bg-primary px-4 py-2 text-white dark:bg-darkmode-primary dark:text-text-dark"
           >
             {pagination}
           </span>
         ) : (
           <a
-            href={slugSelector(
+            href={
               i === 0
-                ? `/${section ? section : ""}`
-                : `/${section ? section : ""}/page/${pagination}`,
-              lang
-            )}
+                ? `${section ? "/" + section : "/"}`
+                : `${section ? "/" + section : ""}/page/${pagination}`
+            }
             aria-current="page"
-            class="rounded px-4 py-2 text-dark hover:bg-theme-light dark:text-darkmode-dark dark:hover:bg-darkmode-theme-light"
+            class="rounded px-4 py-2 text-text-dark hover:bg-light dark:text-darkmode-text-dark dark:hover:bg-darkmode-light"
           >
             {pagination}
           </a>
@@ -101,11 +93,8 @@ for (let i = 1; i <= totalPages; i++) {
       {/* next page */}
       {hasNextPage ? (
         <a
-          href={slugSelector(
-            `/${section ? section : ""}/page/${currentPage + 1}`,
-            lang
-          )}
-          class="rounded px-2 py-1.5 text-dark hover:bg-theme-light dark:text-darkmode-dark dark:hover:bg-darkmode-theme-light"
+          href={`${section ? "/" + section : ""}/page/${currentPage + 1}`}
+          class="rounded px-2 py-1.5 text-text-dark hover:bg-light dark:text-darkmode-text-dark dark:hover:bg-darkmode-light"
         >
           <span class="sr-only">Next</span>
           <svg
@@ -123,7 +112,7 @@ for (let i = 1; i <= totalPages; i++) {
           </svg>
         </a>
       ) : (
-        <span class="rounded px-2 py-1.5 text-light">
+        <span class="rounded px-2 py-1.5 text-text-light">
           <span class="sr-only">Next</span>
           <svg
             viewBox="0 0 20 20"
