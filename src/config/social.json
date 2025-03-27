@@ -6,24 +6,24 @@
       "link": "https://www.ebay.co.uk/str/controlaltrepeat"
     },
     {
-      "name": "facebook",
-      "icon": "FaFacebook",
-      "link": "https://www.facebook.com/people/Control-Alt-Repeat/61563052935394"
-    },
-    {
-      "name": "github",
-      "icon": "FaGithub",
-      "link": "https://github.com/Control-Alt-Repeat"
-    },
-    {
       "name": "instagram",
       "icon": "FaInstagram",
       "link": "https://www.instagram.com/control.alt.repeat"
     },
     {
-      "name": "linktree",
-      "icon": "FaTree",
-      "link": "https://linktr.ee/controlaltrepeat"
+      "name": "facebook",
+      "icon": "FaFacebook",
+      "link": "https://www.facebook.com/people/Control-Alt-Repeat/61563052935394"
+    },
+    {
+      "name": "linkedin",
+      "icon": "FaLinkedin",
+      "link": "https://www.linkedin.com/company/controlaltrepeat"
+    },
+    {
+      "name": "github",
+      "icon": "FaGithub",
+      "link": "https://github.com/Control-Alt-Repeat"
     }
   ]
 }
