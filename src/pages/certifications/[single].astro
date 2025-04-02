@@ -1,0 +1,62 @@
+---
+import ImageMod from "@/components/ImageMod.astro";
+import Base from "@/layouts/Base.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import { slugify } from "@/lib/utils/textConverter";
+import { render } from "astro:content";
+
+// get all static paths for certifications
+export async function getStaticPaths() {
+  const COLLECTION_FOLDER = "certifications";
+  const certifications = await getSinglePage(COLLECTION_FOLDER);
+
+  const paths = certifications.map((certification) => ({
+    params: {
+      single: certification.id,
+    },
+    props: { certification },
+  }));
+  return paths;
+}
+
+const { certification } = Astro.props;
+const { title, meta_title, description, image, pdf } = certification.data;
+const { Content } = await render(certification);
+---
+
+<Base
+  title={title}
+  meta_title={meta_title}
+  description={description}
+  image={image}
+>
+  <section class="section-sm pb-0">
+    <div class="container">
+      <div
+        class="row justify-center border-b border-border pb-14 dark:border-darkmode-border"
+      >
+        <div class="text-center lg:col-4">
+          {
+            image && (
+              <ImageMod
+                src={image}
+                class="mx-auto mb-10 rounded"
+                height={200}
+                width={200}
+                alt={title}
+                format="webp"
+              />
+            )
+          }
+          <h1 class="h3 mb-6">{title}</h1>
+          <p class="mb-4">
+            <a href={`${pdf}`}>View PDF</a>
+          </p>
+          <!-- <div class="content">
+            <Content />
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

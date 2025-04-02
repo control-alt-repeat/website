@@ -1,0 +1,32 @@
+---
+import CertificationCard from "@/components/CertificationCard.astro";
+import Base from "@/layouts/Base.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import PageHeader from "@/partials/PageHeader.astro";
+import { getEntry, type CollectionEntry } from "astro:content";
+
+const COLLECTION_FOLDER = "certifications";
+
+const certificationIndex = (await getEntry(
+  COLLECTION_FOLDER,
+  "-index"
+)) as CollectionEntry<"certifications">;
+const certifications = await getSinglePage(COLLECTION_FOLDER);
+---
+
+<Base title={certificationIndex.data.title}>
+  <PageHeader title={certificationIndex.data.title} />
+  <section class="section-sm pb-0">
+    <div class="container">
+      <div class="row justify-center">
+        {
+          certifications.map((certification) => (
+            <div class="mb-14 md:col-6 lg:col-4">
+              <CertificationCard data={certification} />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Base>

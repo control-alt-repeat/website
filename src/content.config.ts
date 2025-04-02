@@ -41,6 +41,19 @@ const authorsCollection = defineCollection({
   }),
 });
 
+// Certifications collection schema
+const certificationsCollection = defineCollection({
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "src/content/certifications" }),
+  schema: z.object({
+    title: z.string(),
+    meta_title: z.string().optional(),
+    pdf: z.string().optional(),
+    image: z.string().optional(),
+    description: z.string().optional(),
+    draft: z.boolean().optional(),
+  }),
+});
+
 // Pages collection schema
 const pagesCollection = defineCollection({
   loader: glob({ pattern: "**/*.{md,mdx}", base: "src/content/pages" }),
@@ -153,6 +166,7 @@ export const collections = {
   homepage: homepageCollection,
   blog: blogCollection,
   authors: authorsCollection,
+  certifications: certificationsCollection,
   pages: pagesCollection,
   about: aboutCollection,
   contact: contactCollection,
