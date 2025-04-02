@@ -37,7 +37,7 @@ features:
       - Your media will be securely transferred and delivered via digital download, USB, or both – your choice
     button:
       enable: true
-      label: Read more about Digital Conversion
+      label: Read more about digital conversion
       link: /digital-conversion
 
   - title: Upgrade Your Laptop or PC for Better Performance
@@ -49,6 +49,6 @@ features:
       - Install the latest operating system like Windows 11 or switch to Linux
     button:
       enable: true
-      label: Start My Upgrade
+      label: Start my upgrade
       link: /contact
 ---
