@@ -2,7 +2,7 @@
 # Banner
 banner:
   title: Control Alt Repeat
-  content: <b>Bringing New Life to Your Forgotten Tech</b><br /><br />We're a small, passionate company based in the North West of the UK, dedicated to reducing electronic waste. Whether it's recovering cherished memories from old tapes, selling unused game consoles, or performing minor repairs and refurbishments, we're here to ensure your old electronics find new purpose.<br /><br />Explore our services to see how we can help you give your gadgets a second chance.
+  content: <b>Bringing new life to your forgotten tech</b><br /><br />We're a small, passionate company based in the North West of the UK, dedicated to reducing electronic waste. Whether it's recovering cherished memories from old tapes, selling unused game consoles, or performing minor repairs and refurbishments, we're here to ensure your old electronics find new purpose.<br /><br />Explore our services to see how we can help you give your gadgets a second chance.
   image: /images/banner.png
   button:
     enable: true
