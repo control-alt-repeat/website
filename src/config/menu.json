@@ -13,7 +13,6 @@
     { "name": "Certifications", "url": "/certifications" }
   ],
   "footer": [
-    { "name": "Feedback", "url": "/feedback" },
     { "name": "Privacy Policy", "url": "/privacy-policy" }
   ]
 }

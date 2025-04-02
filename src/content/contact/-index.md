@@ -9,7 +9,7 @@ draft: false
 
 07984 599771
 
-_Majority of phonecalls these days are spam. If you call and we do not answer please leave a voicemail, or send a message via WhatsApp, email, or SMS letting us know you called._
+_The majority of phone calls these days are spam. If you call and we do not answer, please leave a voicemail or send a message via WhatsApp, email, or SMS letting us know you called._
 
 ### Email
 
@@ -34,6 +34,6 @@ LA1 4XQ
 
 ### Note
 
-* We have no opening hours and visits must be pre-arranged.
-* We prefer contact via WhatsApp or email.
-* Please note these are not monitored 24/7 however we will aim to respond within 24 hours from Monday to Friday.
+* We have no opening hours and visits must be pre-arranged
+* We prefer contact via WhatsApp or email
+* Please note these are not monitored 24/7 however we will aim to respond within 24 hours from Monday to Friday
