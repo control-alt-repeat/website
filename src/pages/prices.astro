@@ -1,0 +1,35 @@
+---
+import config from "@/config/config.json";
+import Base from "@/layouts/Base.astro";
+import PageHeader from "@/partials/PageHeader.astro";
+import { getEntry, CollectionEntry, render } from "astro:content";
+
+const prices = (await getEntry(
+  "prices",
+  "-index"
+)) as CollectionEntry<"prices">;
+
+const { title, description, meta_title, image } = prices.data;
+
+const { Content } = await render(prices);
+---
+
+<Base
+title={title}
+meta_title={meta_title}
+description={description}
+image={image}
+>
+<PageHeader title={title} />
+  <section class="section-sm">
+    <div class="container">
+      <div class="row">
+        <div class="mx-auto md:col-10 lg:col-10">
+          <div class="content">
+            <Content />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

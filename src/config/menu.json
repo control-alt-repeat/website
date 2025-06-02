@@ -7,9 +7,11 @@
       "hasChildren": true,
       "children": [
         { "name": "Digital Conversion", "url": "/digital-conversion" },
+        { "name": "End-of-Life IT Services", "url": "/end-of-life-it-services" },
         { "name": "Selling Your Electronics", "url": "/selling-your-electronics" }
       ]
     },
+    { "name": "Prices", "url": "/prices" },
     { "name": "Certifications", "url": "/certifications" }
   ],
   "footer": [

@@ -139,6 +139,18 @@ const ctaSectionCollection = defineCollection({
   }),
 });
 
+// prices collection schema
+const pricesCollection = defineCollection({
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "src/content/prices" }),
+  schema: z.object({
+    title: z.string(),
+    meta_title: z.string().optional(),
+    description: z.string().optional(),
+    image: z.string().optional(),
+    draft: z.boolean().optional(),
+  }),
+});
+
 // Testimonials Section collection schema
 const testimonialSectionCollection = defineCollection({
   loader: glob({
@@ -170,6 +182,7 @@ export const collections = {
   pages: pagesCollection,
   about: aboutCollection,
   contact: contactCollection,
+  prices: pricesCollection,
 
   // sections
   ctaSection: ctaSectionCollection,
