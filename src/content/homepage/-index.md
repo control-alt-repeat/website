@@ -2,7 +2,7 @@
 # Banner
 banner:
   title: Control Alt Repeat
-  content: <b>Bringing new life to your forgotten tech</b><br /><br />We're a small, passionate company based in the North West of the UK, dedicated to reducing electronic waste. Whether it's recovering cherished memories from old tapes, selling unused game consoles, or performing minor repairs and refurbishments, we're here to ensure your old electronics find new purpose.<br /><br />Explore our services to see how we can help you give your gadgets a second chance.
+  content: <b>Bringing new life to your forgotten tech</b><br /><br />We're a small, passionate company based in the North West of the UK, dedicated to reducing electronic waste. Whether it's recovering cherished memories from old tapes, selling unused game consoles, or performing minor repairs and refurbishments, we're here to ensure your old electronics find new purpose.<br /><br />07984599771 - hello@controlaltrepeat.net
   image: /images/banner.png
   button:
     enable: true
@@ -11,44 +11,51 @@ banner:
 
 # Features
 features:
-  - title: Reclaim Value from Your Electronics
+  - title: End-of-life IT and tech disposal
     image: /images/service-2.png
-    content: "Turn your unused tech into cash with ease! We handle everything, from listing to sale, with just a 30% commission from the final sale price. We specialize in selling:"
+    content: "This includes both residential and commercial. We will collect for free within the local area. We are a certified waste carrier and have T11 exemption allowing us to dismantle your old electronics and prevent as much as possible going to landfill. If you have something of particular value we can offer to sell your items for a commission which will take after it's sale. We accept the following:"
     bulletpoints:
+      - Computers
+      - Thermal printers
+      - Monitors
+      - Laptops
       - Games consoles
       - Computer games
-      - Laptops
       - Mobile phones
       - Digital cameras
       - Mass storage devices
     button:
       enable: true
-      label: Read more about selling your electronics
-      link: /selling-your-electronics
+      label: Get in touch
+      link: /contact
 
-  - title: Digital Conversion
+  - title: Data recovery
     image: /images/service-1.png
-    content: "Preserve your precious memories with our growing range of media conversion solutions. We specialize in recovering video, audio, and data from outdated formats, including:"
+    content: "Got an old laptop or computer with photos still on it, but it won't turn on? We can help you get that data back. We also have a growing range of devices for digitising older analogue media to your chosen media (USB/DVD/etc). If the media you have is not in our list, get in touch as we may still be able to help you via one of our partners:"
     bulletpoints:
       - VHS
       - Hi8
       - Minidisc
-      - Computer drives (IDE/SATA/mSATA and more)
-      - Your media will be securely transferred and delivered via digital download, USB, or both – your choice
+      - Floppy disc
+      - Computer drives
+      - Your media will be securely transferred and delivered via digital download, USB, or both – your choice - unless media is provided this will be charged
     button:
       enable: true
-      label: Read more about digital conversion
-      link: /digital-conversion
+      label: Get in touch
+      link: /contact
 
-  - title: Upgrade Your Laptop or PC for Better Performance
+  - title: Computer repair, maintenance and upgrades
     image: /images/service-3.png
-    content: "Breathe new life into your laptop or computer with our easy upgrade services. In many cases, a simple upgrade can significantly boost power and extend the life of your device. However, some laptops may have limitations, so we’ll assess your specific needs first. With our services you can:"
+    content: "We can work on computers and laptops both Windows and Mac. Prices start at £40/hour and usually are completed within that time. Mac pricing starts at £50 due to the increased complexity:"
     bulletpoints:
-      - Give your computer a new lease of life with a storage or RAM upgrade
-      - Replace a broken laptop screen for a fresh and new functioning display
-      - Install the latest operating system like Windows 11 or switch to Linux
+      - Laptop screen, keyboard and trackpad repair or replacement
+      - Internal deep-clean and thermal paste refresh
+      - Retro PC diagnostics and repair; we have Windows 95 and XP machines in our shop!
+      - Internal storage cloning and recovery
+      - Virus and malware removal
+      - General diagnostics
     button:
       enable: true
-      label: Start my upgrade
+      label: Get in touch
       link: /contact
 ---
