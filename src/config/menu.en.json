@@ -13,6 +13,7 @@
     { "name": "Certifications", "url": "/certifications" }
   ],
   "footer": [
+    { "name": "Returns Policy", "url": "/returns-policy" },
     { "name": "Privacy Policy", "url": "/privacy-policy" }
   ]
 }
